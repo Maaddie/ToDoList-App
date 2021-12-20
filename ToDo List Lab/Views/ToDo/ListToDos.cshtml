@@ -1,0 +1,20 @@
+﻿@model IEnumerable<ToDo>
+
+@{
+    ViewData["Title"] = "ListToDos";
+}
+
+<h1>List of Tasks</h1>
+
+@foreach (ToDo td in Model)
+{
+
+<div style="border: solid 2px blue">
+
+    <p>Name: @td.Name</p>
+    <p>Hours Needed: @td.HoursNeeded</p>
+    <p>Is Completed: @td.IsCompleted</p>
+    
+</div>
+}
+

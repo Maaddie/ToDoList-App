@@ -1,0 +1,36 @@
+﻿@model EmployeeTaskViewModel
+
+@foreach (Employee e in Model.Employees)
+{
+<div style="border: solid 2px blue">
+    <p>@e.Name</p>
+    <p>@e.Title</p>
+</div>
+    <a asp-controller="Employee" asp-action="UpdateEmployee" asp-route-id="@e.Id">Update Employee</a>
+    <br />
+    <a asp-controller="Employee" asp-action="DeleteEmployee" asp-route-id="@e.Id">Delete Employee</a>
+    <br />
+}
+
+<p>--------------------</p>
+
+@*<h2>Tasks</h2>
+@foreach (ToDo t in Model.ToDos)
+{
+    <p>@t.Name</p>
+
+
+
+
+
+}*@
+
+
+
+
+@*@model IEnumerable<Employee>
+
+    @foreach(Employee e in Model)
+                {
+                    <p>@e.Name</p>*@
+<!--}-->
